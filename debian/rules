@@ -2,6 +2,9 @@
 
 include /usr/share/dpkg/architecture.mk
 include /usr/share/dpkg/buildtools.mk
+export DEB_CFLAGS_MAINT_APPEND = -fno-lto
+export DEB_CXXFLAGS_MAINT_APPEND = -fno-lto
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
@@ -17,7 +20,7 @@ CONFIGURE_OPTIONS += $(if $(filter amd64 i386 powerpc,$(DEB_HOST_ARCH)),--firewi
 
 override_dh_auto_configure:
 	python3 ./waf configure \
-		--prefix=/usr --classic \
+		--prefix=/usr --classic --example-tools \
 		--libdir=/usr/lib/$(DEB_HOST_MULTIARCH) \
 		$(CONFIGURE_OPTIONS) \
 		CC='$(CC)' CXX='$(CXX)' PKGCONFIG='$(PKG_CONFIG)'

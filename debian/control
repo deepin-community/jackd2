@@ -7,11 +7,11 @@ Uploaders: Adrian Knoth <adi@drcomp.erfurt.thur.de>,
 Build-Depends: debhelper-compat (= 13),
                dh-exec,
                dh-sequence-python3,
-               libasound2-dev (>= 1.0.18) [linux-any],
+               libasound2-dev [linux-any],
                libdb-dev,
                libdbus-1-dev,
                libexpat1-dev,
-               libffado-dev (>= 2.0.0) [linux-any],
+               libffado-dev [linux-any],
                libncurses-dev,
                libopus-dev,
                libraw1394-dev [linux-any],
@@ -23,7 +23,7 @@ Build-Depends: debhelper-compat (= 13),
                libzita-resampler-dev,
                po-debconf,
                python3:any
-Standards-Version: 4.6.0
+Standards-Version: 4.6.2
 Rules-Requires-Root: no
 Homepage: https://jackaudio.org/
 Vcs-Git: https://salsa.debian.org/multimedia-team/jackd2.git
@@ -31,9 +31,9 @@ Vcs-Browser: https://salsa.debian.org/multimedia-team/jackd2
 
 Package: jackd2
 Architecture: any
-Replaces: jack-daemon, jackd (<< 3), libjack0 (<= 1.9.5~dfsg-13)
+Replaces: jack-daemon
 Provides: jack-daemon
-Conflicts: jack-daemon, jackd (<< 3)
+Conflicts: jack-daemon
 Depends: debconf | debconf-2.0,
          libjack-jackd2-0 (= ${binary:Version}),
          python3-dbus,
@@ -52,9 +52,7 @@ Package: libjack-jackd2-0
 Architecture: any
 Section: libs
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Conflicts: jackd2 (<< ${binary:Version}),
-           jackd2 (>> ${binary:Version}),
-           libjack-0.116,
+Conflicts: libjack-0.116,
            libjack-0.125,
            libjack0
 Suggests: jackd2 (= ${binary:Version})
@@ -84,9 +82,9 @@ Architecture: any
 Section: libdevel
 Multi-Arch: same
 Depends: libjack-jackd2-0 (= ${binary:Version}), pkg-config, ${misc:Depends}
-Conflicts: libjack-dev, libjack0.100.0-dev (<< 0.102.20-2)
+Breaks: libjack0.100.0-dev (<< 0.102.20-2)
+Conflicts: libjack-dev
 Provides: libjack-dev, libjack-dev-session, libjack0.100.0-dev
-Replaces: libjack0.71.2-0 (<< 0.75.0-1)
 Description: JACK Audio Connection Kit (development files)
  JACK is a low-latency sound server, allowing multiple applications to
  connect to one audio device, and to share audio between themselves.
