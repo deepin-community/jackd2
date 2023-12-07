@@ -1,3 +1,72 @@
+jackd2 (1.9.21~dfsg-3) unstable; urgency=medium
+
+  * Team upload.
+  * Import Vagrant Cascadian's reproducible builds patches:
+    - Add 0001-man-fill_template-Use-numeric-year-month-date-for-ma.patch.
+      Without this patch, manpages may contain a locale-translated month name,
+      as well as a different date based on the build environment timezone.
+      (Closes: #1035331).
+    - Add 0002-man-fill_template-Use-UTC-date-to-avoid-differences-.patch.
+      This patch solves variance in generated man page date stamps introduced
+      when man pages generated in different timezones are compared to each
+      other.
+    - Add 0003-man-fill_template-Use-POSIX-compatible-comparison.patch.  When
+      built in an environment where /bin/sh -> bash, all of these manpages are
+      built and included in the package.  When /bin/sh -> dash, the manpages
+      that users depend on are absent from bin:jackd2.
+      (Closes: #1035329, #1035308).
+
+ -- Nicholas D Steeves <sten@debian.org>  Thu, 04 May 2023 15:29:39 -0400
+
+jackd2 (1.9.21~dfsg-2) unstable; urgency=medium
+
+  * Team upload
+  * Bump Standards-Version to 4.6.2
+  * Fix FTBFS: ValueError: invalid mode: 'rUb' (Closes: #1028710)
+
+ -- Dennis Braun <snd@debian.org>  Tue, 17 Jan 2023 21:34:44 +0100
+
+jackd2 (1.9.21~dfsg-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster
+
+  [ Dennis Braun ]
+  * New upstream version 1.9.21~dfsg
+  * Bump Standards Version to 4.6.1
+  * Fix Conflicts/Breaks of libjack-jackd2-0 and libjack-jackd2-dev
+  * d/rules: Add hardening
+  * d/rules: Build with --example-tools, not anymore default
+  * d/upstream/metadata: Add Archive, Repository & Repository-Browse fields
+  * Add Peter Bridgman to d/copyright
+
+  [ Sebastian Ramacher ]
+  * debian/control:
+    - Remove useless Breaks
+    - Remove obsolete Replaces
+
+ -- Dennis Braun <d_braun@kabelmail.de>  Thu, 26 May 2022 12:35:45 +0200
+
+jackd2 (1.9.20~dfsg-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+
+  [ Erich Eickmeyer ]
+  * Build without LTO Unfortunately, if built with LTO, jackd2 will hang and
+    deny any client connection. Per
+    https://github.com/jackaudio/jack2/issues/776
+
+  [ Sebastian Ramacher ]
+  * New upstream version 1.9.20~dfsg
+  * debian/patches: Remove obsolete patch. Upstream supports SOURCE_DATE_EPOCH
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sun, 23 Jan 2022 17:38:32 +0100
+
 jackd2 (1.9.19~dfsg-2) unstable; urgency=medium
 
   * Team upload
