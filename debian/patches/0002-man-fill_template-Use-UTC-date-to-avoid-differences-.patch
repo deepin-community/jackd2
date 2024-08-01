@@ -1,10 +1,11 @@
-From 021e05e61bc9ae982063d666de33473e391a0602 Mon Sep 17 00:00:00 2001
 From: Vagrant Cascadian <vagrant@reproducible-builds.org>
 Date: Sun, 30 Apr 2023 15:52:22 -0700
-Subject: man/fill_template: Use UTC date to avoid differences
- based on timezone.
+Subject: man/fill_template: Use UTC date to avoid differences based on
+ timezone.
 
 https://reproducible-builds.org/docs/timezones/
+
+Forwarded: https://github.com/jackaudio/jack2/pull/932
 ---
  man/fill_template | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
@@ -21,6 +22,3 @@ index d1df18d..641cab8 100644
  
  if [ "$2" == "True" ]; then
    for i in *.0 ; do
--- 
-2.39.2
-

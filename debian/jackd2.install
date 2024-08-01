@@ -1,6 +1,4 @@
 #! /usr/bin/dh-exec
-[linux-any] usr/bin/alsa_in
-[linux-any] usr/bin/alsa_out
 [linux-any] usr/lib/*/jack/audioadapter.so
 [linux-any] usr/lib/*/jack/jack_alsa.so
 [linux-any] usr/lib/*/jack/jack_alsarawmidi.so
@@ -8,7 +6,6 @@
 debian/audio.conf usr/share/jackd
 debian/bash_completion.d/* usr/share/bash-completion/completions
 usr/bin/jack*
-usr/lib/*/jack/inprocess.so
 usr/lib/*/jack/jack_dummy.so
 usr/lib/*/jack/jack_loopback.so
 usr/lib/*/jack/jack_net.so
@@ -17,5 +14,3 @@ usr/lib/*/jack/jack_proxy.so
 usr/lib/*/jack/netadapter.so
 usr/lib/*/jack/netmanager.so
 usr/lib/*/jack/profiler.so
-usr/lib/*/jack/zalsa_in.so
-usr/lib/*/jack/zalsa_out.so
