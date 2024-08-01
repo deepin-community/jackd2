@@ -1,4 +1,3 @@
-From 5fe932e274c720b68aff40125f1069fde1490935 Mon Sep 17 00:00:00 2001
 From: Vagrant Cascadian <vagrant@reproducible-builds.org>
 Date: Sun, 30 Apr 2023 15:44:21 -0700
 Subject: man/fill_template: Use numeric year-month-date for manpage.
@@ -6,6 +5,8 @@ Subject: man/fill_template: Use numeric year-month-date for manpage.
 The month may be rendered for the locale of the build environment.
 
 https://reproducible-builds.org/docs/locales/
+
+Forwarded: https://github.com/jackaudio/jack2/pull/932
 ---
  man/fill_template | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
@@ -25,6 +26,3 @@ index 368cb1b..d1df18d 100644
 -  sed -e "s/!VERSION!/${1}/g" -e "s/!DATE!/`date $d '+%B %Y'`/g" < jackd.0 > jackd.1
 +  sed -e "s/!VERSION!/${1}/g" -e "s/!DATE!/`date $d '+%Y-%m-%d'`/g" < jackd.0 > jackd.1
  fi
--- 
-2.39.2
-

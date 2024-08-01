@@ -1,0 +1,60 @@
+# Mesajele în limba română pentru pachetul jackd2.
+# Romanian translation of jackd2.
+# Copyright © 2023 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the jackd2 package.
+#
+# Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2023.
+#
+# Cronologia traducerii fișierului „jackd2”:
+# Traducerea inițială, făcută de R-GC, pentru versiunea jackd2 1.9.21~dfsg-2(2011-12-22).
+# Actualizare a traducerii pentru versiunea Y, făcută de X, Y(anul).
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: jackd2 1.9.21~dfsg-2\n"
+"Report-Msgid-Bugs-To: jackd2@packages.debian.org\n"
+"POT-Creation-Date: 2011-12-22 23:36+0100\n"
+"PO-Revision-Date: 2023-02-21 18:49+0100\n"
+"Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>\n"
+"Language-Team: Romanian <debian-l10n-romanian@lists.debian.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n==0 || (n!=1 && n%100>=1 && "
+"n%100<=19) ? 1 : 2);\n"
+"X-Bugs: Report translation errors to the Language-Team address.\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. Type: boolean
+#. Description
+#: ../jackd2.templates:2001
+msgid "Enable realtime process priority?"
+msgstr "Activați prioritatea procesului în timp real?"
+
+#. Type: boolean
+#. Description
+#: ../jackd2.templates:2001
+msgid ""
+"If you want to run jackd with realtime priorities, the user starting jackd "
+"needs realtime permissions. Accept this option to create the file /etc/security/"
+"limits.d/audio.conf, granting realtime priority and memlock privileges to the "
+"audio group."
+msgstr ""
+"Dacă doriți să rulați «jackd» cu priorități în timp real, utilizatorul care "
+"pornește «jackd» are nevoie de permisiuni în timp real. Acceptați această "
+"opțiune pentru a crea fișierul „/etc/security/limits.d/audio.conf”, acordând "
+"prioritate în timp real și privilegii „memlock” grupului audio."
+
+#. Type: boolean
+#. Description
+#: ../jackd2.templates:2001
+msgid ""
+"Running jackd with realtime priority minimizes latency, but may lead to "
+"complete system lock-ups by requesting all the available physical system "
+"memory, which is unacceptable in multi-user environments."
+msgstr ""
+"Rularea «jackd» cu prioritate în timp real minimizează latența, dar poate duce "
+"la blocări complete ale sistemului prin solicitarea întregii memorie fizice "
+"disponibile a sistemului, ceea ce este inacceptabil în mediile cu mai mulți "
+"utilizatori."
