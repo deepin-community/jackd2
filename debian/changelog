@@ -1,3 +1,9 @@
+jackd2 (1.9.21~dfsg-3deepin0) unstable; urgency=medium
+
+  * No source change upload against GCC 12.
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Thu, 19 Sep 2024 22:50:12 +0800
+
 jackd2 (1.9.21~dfsg-3) unstable; urgency=medium
 
   * Team upload.
