@@ -1,0 +1,28 @@
+From: Alexandre Detiste <alexandre.detiste@gmail.com>
+Date: Mon, 23 Dec 2024 00:03:25 +0100
+Subject: Replace deprecated module pipes with shlex
+
+---
+ waflib/extras/genpybind.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/waflib/extras/genpybind.py b/waflib/extras/genpybind.py
+index ac206ee..c095b0e 100644
+--- a/waflib/extras/genpybind.py
++++ b/waflib/extras/genpybind.py
+@@ -1,5 +1,5 @@
+ import os
+-import pipes
++import shlex
+ import subprocess
+ import sys
+ 
+@@ -17,7 +17,7 @@ from waflib.TaskGen import feature, before_method
+ 
+ 
+ def join_args(args):
+-    return " ".join(pipes.quote(arg) for arg in args)
++    return " ".join(shlex.quote(arg) for arg in args)
+ 
+ 
+ def configure(cfg):

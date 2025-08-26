@@ -1,3 +1,20 @@
+jackd2 (1.9.22~dfsg-5) unstable; urgency=medium
+
+  * Team Upload
+  * Remove obsolete debian/README.source
+
+  [ Carles Pina i Estany ]
+  * Added po-debconf Catalan translation (Closes: #1101121)
+
+ -- Alexandre Detiste <tchet@debian.org>  Sun, 17 Aug 2025 20:56:49 +0200
+
+jackd2 (1.9.22~dfsg-4) unstable; urgency=medium
+
+  * debian/patches: Replace deprecated module pipes with shlex.
+    Thanks to Alexandre Detiste (Closes: #1084581)
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Mon, 23 Dec 2024 00:04:31 +0100
+
 jackd2 (1.9.22~dfsg-3) unstable; urgency=medium
 
   * debian/control: Recommend jack-example-tools (Closes: #1076379)
